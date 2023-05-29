@@ -1,0 +1,5 @@
+rootProject.name = 'homework'
+include 'annotation'
+include 'annotationProcessor'
+include 'testmodule'
+
