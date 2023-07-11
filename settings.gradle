@@ -4,4 +4,5 @@ include 'annotationProcessor'
 include 'testmodule'
 include 'hw16_patterns'
 include 'hw13_solid'
+include 'hw-17-serialization'
 
