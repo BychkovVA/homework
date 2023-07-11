@@ -3,4 +3,5 @@ include 'annotation'
 include 'annotationProcessor'
 include 'testmodule'
 include 'hw16_patterns'
+include 'hw13_solid'
 
