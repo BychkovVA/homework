@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Page</title>
+</head>
+<body>
+<h1>Form Page</h1>
+<form action="#" th:action="@{/submit}" method="post">
+    <label for="users">Users:</label>
+    <select id="users" name="users">
+        <option value="user1">User 1</option>
+        <option value="user2">User 2</option>
+        <option value="user3">User 3</option>
+    </select>
+    <br>
+    <label for="inputText">Input Text:</label>
+    <input type="text" id="inputText" name="inputText">
+    <br>
+    <button type="submit">Send</button>
+</form>
+</body>
+</html>

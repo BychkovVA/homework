@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>ATM Page</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+
+</head>
+
+<body>
+
+<h1>ATM Page</h1>
+
+<h2> Insert Card Number and Pin Code and choose action </h2>
+
+<form th:action="@{/submit}" method="post">
+
+    <label for="cardNumber">Card Number:</label>
+
+    <input type="text" id="cardNumber" name="cardNumber">
+
+
+
+    <label for="pinCode">Pin Code:</label>
+
+    <input type="password" id="pinCode" name="pinCode">
+
+
+
+    <button type="submit" name="action" value="takeMoney">Take Money</button>
+
+    <button type="submit" name="action" value="putMoney">Put Money</button>
+
+    <button type="submit" name="action" value="seeBalance">See Balance</button>
+
+    <button type="submit" name="action" value="changePinCode">Change Pin Code</button>
+
+</form>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script th:src="@{/js/script.js}"></script>
+
+</body>
+
+</html>
