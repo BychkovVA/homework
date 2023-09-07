@@ -1,10 +1,15 @@
 package atm.service;
 
+import lombok.extern.log4j.Log4j2;
+import org.springframework.stereotype.Component;
+
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
+@Component
+@Log4j2
 public class ATM implements CashReceiving, CashGiving {
     private Map<Integer, Integer> banknotes;
 
@@ -55,7 +60,7 @@ public class ATM implements CashReceiving, CashGiving {
     public void displayBalance() {
         System.out.println("Current balance:");
         for (int denomination : banknotes.keySet()) {
-            System.out.println("₽" + denomination + ": " + banknotes.get(denomination));
+            log.info("₽" + denomination + ": " + banknotes.get(denomination));
         }
     }
 
