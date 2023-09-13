@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>ATM Page</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+
+</head>
+
+<body>
+
+<h1>ATM Page. Put Money</h1>
+
+
+
+<form th:action="@{/submit}" method="post">
+
+    <label for="amount">Insert money:</label>
+
+    <input type="text" id="amount" name="amount">
+
+
+    <button type="submit" name="action" value="putMoneyAmount">Put Money</button>
+
+    <button type="submit" name="action" value="back">Back</button>
+
+</form>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script th:src="@{/js/script.js}"></script>
+
+</body>
+
+</html>
