@@ -7,4 +7,6 @@ include 'hw13_solid'
 include 'hw-17-serialization'
 include 'hw-17-sms'
 include 'hw-25.web-server'
+include 'hw-32.queue'
+include 'hw-33.queue'
 
