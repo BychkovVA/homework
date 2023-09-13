@@ -18,28 +18,41 @@ class PrinterThread implements Runnable {
             runBarrier.await();
 
             while (!Thread.currentThread().isInterrupted()) {
-                if (id == 1) {
-                    printNumbers();
-                }
-                printBarrier.await();
+                for (int i = 1; i <= 10; i++) {
+                    if (id == 1) {
+                        printNumbers(i);
+                    }
+                    printBarrier.await();
 
-                if (id == 2) {
-                    printNumbers();
+                    if (id == 2) {
+                        printNumbers(i);
+                    }
+                    printBarrier.await();
                 }
-                printBarrier.await();
+
+
+                for (int i = 9; i >= 0; i--) {
+                    if (id == 1) {
+                        printNumbers(i);
+                    }
+                    printBarrier.await();
+
+                    if (id == 2) {
+                        printNumbers(i);
+                    }
+                    printBarrier.await();
+                }
+
                 Thread.currentThread().interrupt();
             }
+
+
         } catch (Exception ex) {
             ex.printStackTrace();
         }
     }
 
-    private void printNumbers() {
-        for (int i = 1; i <= 10; i++) {
+    private void printNumbers(int i) {
             System.out.println("Поток " + id + ":" + i);
-        }
-        for (int i = 9; i >= 1; i--) {
-            System.out.println("Поток " + id + ":" + i);
-        }
     }
 }
