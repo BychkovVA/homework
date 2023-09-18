@@ -8,8 +8,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class DataObserver implements Runnable {
-    private static final String INSERTED_FILE = "E:\\GIT\\homework\\hw-33.queue\\src\\main\\log\\inserted.txt";
-    private static final String DELETED_FILE = "E:\\GIT\\homework\\hw-33.queue\\src\\main\\log\\deleted.txt";
+    private static final String INSERTED_FILE = "./src/main/resources/inserted.txt";
+    private static final String DELETED_FILE = "./src/main/resources/deleted.txt";
     private final ObservedList observedList;
 
     public DataObserver(ObservedList observedList) {
